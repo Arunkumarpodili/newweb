@@ -1,6 +1,6 @@
 FROM almalinux
 RUN yum install nginx -y
-CMD ["nginx", "-d", "Daemon off;"]
+CMD ["nginx", "-d", "daemon off;"]
 RUN rm -rf /usr/share/nginx/html/index.html
 EXPOSE 8080
 COPY UI /usr/share/nginx/html
