@@ -1,7 +1,8 @@
 FROM almalinux
 RUN yum install nginx -y
-CMD ["nginx", "-g", "Daemon off;"]
+CMD ["nginx", "-d", "Daemon off;"]
 RUN rm -rf /usr/share/nginx/html/index.html
+EXPOSE 8080
 COPY UI /usr/share/nginx/html
 LABEL AUTHOR="ARUN"\
       AGE="24"
